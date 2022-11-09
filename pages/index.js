@@ -5,7 +5,11 @@ import Menu from "../src/components/Menu"
 import Timeline from "../src/components/Timeline"
 
 function HomePage() {
-  const homePageStyles = {}
+  const homePageStyles = {
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
+  }
 
   return (
     <>
@@ -30,6 +34,7 @@ const StyledHeader = styled.div`
 
   .user-info {
     width: 100%;
+    margin-top: 56px;
     padding: 16px 32px;
 
     display: flex;
@@ -46,6 +51,7 @@ function Header() {
           src={`https://github.com/${config.github}.png`}
           alt="Foto do Pablo Gabriel olhando pra frente"
         />
+
         <div>
           <h2>{config.name}</h2>
           <p>{config.job}</p>

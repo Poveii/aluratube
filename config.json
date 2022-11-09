@@ -1,5 +1,21 @@
 {
   "name": "Pablo Gabriel (Poveii)",
   "job": "Desenvolvedor Frontend Junior",
-  "github": "poveii"
+  "github": "poveii",
+  "playlists": {
+    "games": [
+      {
+        "title": "Título aqui",
+        "url": "Link aqui",
+        "thumbnail": "Miniatura do vídeo"
+      }
+    ],
+    "frontend": [
+      {
+        "title": "Título aqui do frontend",
+        "url": "Link aqui do frontend",
+        "thumbnail": "Miniatura do vídeo frontend"
+      }
+    ]
+  }
 }

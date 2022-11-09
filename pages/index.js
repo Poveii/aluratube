@@ -8,7 +8,7 @@ function HomePage() {
     <div style={homePageStyles}>
       <Menu />
       <Header />
-      <Timeline />
+      <Timeline playlists={config.playlists} />
     </div>
   )
 }
@@ -53,6 +53,29 @@ function Header() {
   )
 }
 
-function Timeline() {
-  return <div>Timeline</div>
+function Timeline(props) {
+  const playlistNames = Object.keys(props.playlists)
+
+  return (
+    <div>
+      {playlistNames.map((playlistName) => {
+        const videos = props.playlists[playlistName]
+        return (
+          <section>
+            <h2>{playlistName}</h2>
+            <div>
+              {videos.map((video) => {
+                return (
+                  <a href={video.url}>
+                    <img src={video.thumbnail} />
+                    <span>{video.title}</span>
+                  </a>
+                )
+              })}
+            </div>
+          </section>
+        )
+      })}
+    </div>
+  )
 }

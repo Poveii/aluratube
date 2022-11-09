@@ -1,15 +1,19 @@
 import config from "../config.json"
 import styled from "styled-components"
+import { CSSReset } from "../src/components/CSSReset"
 
 function HomePage() {
-  const homePageStyles = { backgroundColor: "red" }
+  const homePageStyles = {}
 
   return (
-    <div style={homePageStyles}>
-      <Menu />
-      <Header />
-      <Timeline playlists={config.playlists} />
-    </div>
+    <>
+      <CSSReset />
+      <div style={homePageStyles}>
+        <Menu />
+        <Header />
+        <Timeline playlists={config.playlists} />
+      </div>
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import config from "../config.json"
 import styled from "styled-components"
 import { CSSReset } from "../src/components/CSSReset"
 import Menu from "../src/components/Menu"
+import Timeline from "../src/components/Timeline"
 
 function HomePage() {
   const homePageStyles = {}
@@ -51,32 +52,5 @@ function Header() {
         </div>
       </section>
     </StyledHeader>
-  )
-}
-
-function Timeline(props) {
-  const playlistNames = Object.keys(props.playlists)
-
-  return (
-    <div>
-      {playlistNames.map((playlistName) => {
-        const videos = props.playlists[playlistName]
-        return (
-          <section>
-            <h2>{playlistName}</h2>
-            <div>
-              {videos.map((video) => {
-                return (
-                  <a href={video.url}>
-                    <img src={video.thumbnail} />
-                    <span>{video.title}</span>
-                  </a>
-                )
-              })}
-            </div>
-          </section>
-        )
-      })}
-    </div>
   )
 }

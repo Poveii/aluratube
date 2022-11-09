@@ -1,3 +1,5 @@
+import config from "../config.json"
+
 function HomePage() {
   const homePageStyles = { backgroundColor: "red" }
 
@@ -17,7 +19,14 @@ function Menu() {
 }
 
 function Header() {
-  return <div>Header</div>
+  return (
+    <div>
+      {/* <img src="" alt="" /> */}
+      <img src={`https://github.com/${config.github}.png`} />
+      <h2>{config.name}</h2>
+      <p>{config.job}</p>
+    </div>
+  )
 }
 
 function Timeline() {

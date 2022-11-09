@@ -1,6 +1,7 @@
 import config from "../config.json"
 import styled from "styled-components"
 import { CSSReset } from "../src/components/CSSReset"
+import Menu from "../src/components/Menu"
 
 function HomePage() {
   const homePageStyles = {}
@@ -18,10 +19,6 @@ function HomePage() {
 }
 
 export default HomePage
-
-function Menu() {
-  return <div>Menu</div>
-}
 
 const StyledHeader = styled.div`
   img {

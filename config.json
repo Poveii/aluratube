@@ -5,16 +5,66 @@
   "playlists": {
     "games": [
       {
-        "title": "Título aqui",
-        "url": "Link aqui",
-        "thumbnail": "Miniatura do vídeo"
+        "title": "The Painscreek Killings Playlist - Lives do Alanzoka",
+        "url": "https://www.youtube.com/playlist?list=PLrVhyUnEQMV_LUtkELSCNpTxBGydmxCQy",
+        "thumb": "https://img.youtube.com/vi/rLtbD5syza0/hqdefault.jpg"
+      },
+      {
+        "title": "Gas Station Simulator Playlist - Lives do Alanzoka",
+        "url": "https://www.youtube.com/playlist?list=PLrVhyUnEQMV_cx5h0WlOQop9u_C9mNWSQ",
+        "thumb": "https://img.youtube.com/vi/CP8fM1otBmg/hqdefault.jpg"
+      },
+      {
+        "title": "O COD MWII COMO VOCÊ NUNCA VIU ANTES!! - Hayashii - Dicas, notícias e opiniões!",
+        "url": "https://www.youtube.com/watch?v=DpbXSo-j7E4",
+        "thumb": "https://img.youtube.com/vi/DpbXSo-j7E4/hqdefault.jpg"
+      },
+      {
+        "title": "UM ANO A MAIS | Paródia COD Modern Warfare II - Hayashii - Dicas, notícias e opiniões!",
+        "url": "https://www.youtube.com/watch?v=pACA_ZuM2PU",
+        "thumb": "https://img.youtube.com/vi/pACA_ZuM2PU/hqdefault.jpg"
+      },
+      {
+        "title": "Perfect Heist 2 Playlist - Hayashii Lives",
+        "url": "https://www.youtube.com/playlist?list=PLQ-UNXudbYP9UDZWU6Z0eBFH9sk0BklQr",
+        "thumb": "https://img.youtube.com/vi/6njHa_JjYHQ/hqdefault.jpg"
+      },
+      {
+        "title": "POPPY PLAYTIME DA ZUERA! Eu quebrei de tanto rir socorrokkkkkk - Core",
+        "url": "https://www.youtube.com/watch?v=gmrKC0RTRyc",
+        "thumb": "https://img.youtube.com/vi/gmrKC0RTRyc/hqdefault.jpg"
       }
     ],
-    "frontend": [
+    "programação": [
       {
-        "title": "Título aqui do frontend",
-        "url": "Link aqui do frontend",
-        "thumbnail": "Miniatura do vídeo frontend"
+        "title": "Por Que Tudo Parece Ter Menos Graça Hoje Em Dia - Filipe Deschamps",
+        "url": "https://www.youtube.com/watch?v=_hobgOFDekg",
+        "thumb": "https://img.youtube.com/vi/_hobgOFDekg/hqdefault.jpg"
+      },
+      {
+        "title": "A história da Ana. - Filipe Deschamps",
+        "url": "https://www.youtube.com/watch?v=nngF9N6ePgY",
+        "thumb": "https://img.youtube.com/vi/nngF9N6ePgY/hqdefault.jpg"
+      },
+      {
+        "title": "Rust no Linux: A linguagem que promete mudar o Kernel - Diolinux",
+        "url": "https://www.youtube.com/watch?v=lkcIrgZyAOk",
+        "thumb": "https://img.youtube.com/vi/lkcIrgZyAOk/hqdefault.jpg"
+      },
+      {
+        "title": "Seus primeiros passos no JavaScript - Rocketseat",
+        "url": "https://www.youtube.com/watch?v=OHN8Ze4te70",
+        "thumb": "https://img.youtube.com/vi/OHN8Ze4te70/hqdefault.jpg"
+      },
+      {
+        "title": "O que é React JS? #HipstersPontoTube - Alura Cursos Online",
+        "url": "https://www.youtube.com/watch?v=6IuQUgeDPg0",
+        "thumb": "https://img.youtube.com/vi/6IuQUgeDPg0/hqdefault.jpg"
+      },
+      {
+        "title": "4 dicas para escrever código limpo em JavaScript - Rocketseat",
+        "url": "https://www.youtube.com/watch?v=HZPS_uxT6sw",
+        "thumb": "https://img.youtube.com/vi/HZPS_uxT6sw/hqdefault.jpg"
       }
     ]
   }

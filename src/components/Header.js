@@ -2,7 +2,15 @@ import styled from "styled-components"
 import config from "../../config.json"
 
 const StyledHeader = styled.div`
+  padding-top: 56px;
+
   img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+
+  #profile {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -10,7 +18,6 @@ const StyledHeader = styled.div`
 
   .user-info {
     width: 100%;
-    margin-top: 56px;
     padding: 16px 32px;
 
     display: flex;
@@ -18,14 +25,18 @@ const StyledHeader = styled.div`
     gap: 16px;
   }
 `
-export default function Header() {
+export default function Header(props) {
   return (
     <StyledHeader>
-      {/* <img src="" alt="" /> */}
+      <img
+        src={props.banner}
+        alt="Foto de um tela com códigos de programação"
+      />
       <section className="user-info">
         <img
           src={`https://github.com/${config.github}.png`}
           alt="Foto do Pablo Gabriel olhando pra frente"
+          id="profile"
         />
 
         <div>

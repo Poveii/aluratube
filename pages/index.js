@@ -16,7 +16,7 @@ function HomePage() {
       <CSSReset />
       <div style={homePageStyles}>
         <Menu />
-        <Header />
+        <Header banner={config.banner} />
         <Timeline playlists={config.playlists} />
       </div>
     </>

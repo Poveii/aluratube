@@ -3,6 +3,7 @@ import { CSSReset } from "../src/components/CSSReset"
 import Menu from "../src/components/Menu"
 import Header from "../src/components/Header"
 import Timeline from "../src/components/Timeline"
+import Favorites from "../src/components/Favorites"
 
 function HomePage() {
   const homePageStyles = {
@@ -18,6 +19,7 @@ function HomePage() {
         <Menu />
         <Header banner={config.banner} />
         <Timeline playlists={config.playlists} />
+        <Favorites profiles={config.favorites} />
       </div>
     </>
   )

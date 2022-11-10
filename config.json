@@ -68,5 +68,17 @@
         "thumb": "https://img.youtube.com/vi/HZPS_uxT6sw/hqdefault.jpg"
       }
     ]
-  }
+  },
+  "favorites": [
+    {
+      "name": "Alurinho",
+      "image": "https://randomuser.me/api/portraits/men/66.jpg",
+      "link": ""
+    },
+    {
+      "name": "Alurinha",
+      "image": "https://randomuser.me/api/portraits/women/48.jpg",
+      "link": ""
+    }
+  ]
 }

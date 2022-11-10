@@ -38,6 +38,9 @@ const StyledTimeline = styled.div`
           padding-top: 8px;
           display: block;
           padding-right: 24px;
+        }
+        span,
+        strong {
           color: ${({ theme }) => theme.textColorBase || "#222222"};
         }
       }
@@ -60,6 +63,7 @@ export default function Timeline(props) {
                   <a href={video.url}>
                     <img src={video.thumb} alt="" />
                     <span>{video.title}</span>
+                    <strong>{video.owner}</strong>
                   </a>
                 )
               })}

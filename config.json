@@ -6,66 +6,78 @@
   "playlists": {
     "games": [
       {
-        "title": "The Painscreek Killings Playlist - Lives do Alanzoka",
+        "title": "The Painscreek Killings Playlist",
         "url": "https://www.youtube.com/playlist?list=PLrVhyUnEQMV_LUtkELSCNpTxBGydmxCQy",
-        "thumb": "https://img.youtube.com/vi/rLtbD5syza0/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/rLtbD5syza0/hqdefault.jpg",
+        "owner": "Lives do Alanzoka"
       },
       {
-        "title": "Gas Station Simulator Playlist - Lives do Alanzoka",
+        "title": "Gas Station Simulator Playlist",
         "url": "https://www.youtube.com/playlist?list=PLrVhyUnEQMV_cx5h0WlOQop9u_C9mNWSQ",
-        "thumb": "https://img.youtube.com/vi/CP8fM1otBmg/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/CP8fM1otBmg/hqdefault.jpg",
+        "owner": "Lives do Alanzoka"
       },
       {
-        "title": "O COD MWII COMO VOCÊ NUNCA VIU ANTES!! - Hayashii - Dicas, notícias e opiniões!",
+        "title": "O COD MWII COMO VOCÊ NUNCA VIU ANTES!!",
         "url": "https://www.youtube.com/watch?v=DpbXSo-j7E4",
-        "thumb": "https://img.youtube.com/vi/DpbXSo-j7E4/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/DpbXSo-j7E4/hqdefault.jpg",
+        "owner": "Hayashii - Dicas, notícias e opiniões!"
       },
       {
-        "title": "UM ANO A MAIS | Paródia COD Modern Warfare II - Hayashii - Dicas, notícias e opiniões!",
+        "title": "UM ANO A MAIS | Paródia COD Modern Warfare II",
         "url": "https://www.youtube.com/watch?v=pACA_ZuM2PU",
-        "thumb": "https://img.youtube.com/vi/pACA_ZuM2PU/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/pACA_ZuM2PU/hqdefault.jpg",
+        "owner": "Hayashii - Dicas, notícias e opiniões!"
       },
       {
-        "title": "Perfect Heist 2 Playlist - Hayashii Lives",
+        "title": "Perfect Heist 2 Playlist",
         "url": "https://www.youtube.com/playlist?list=PLQ-UNXudbYP9UDZWU6Z0eBFH9sk0BklQr",
-        "thumb": "https://img.youtube.com/vi/6njHa_JjYHQ/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/6njHa_JjYHQ/hqdefault.jpg",
+        "owner": "Hayashii Lives"
       },
       {
-        "title": "POPPY PLAYTIME DA ZUERA! Eu quebrei de tanto rir socorrokkkkkk - Core",
+        "title": "POPPY PLAYTIME DA ZUERA! Eu quebrei de tanto rir socorrokkkkkk",
         "url": "https://www.youtube.com/watch?v=gmrKC0RTRyc",
-        "thumb": "https://img.youtube.com/vi/gmrKC0RTRyc/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/gmrKC0RTRyc/hqdefault.jpg",
+        "owner": "Core"
       }
     ],
     "programação": [
       {
-        "title": "Por Que Tudo Parece Ter Menos Graça Hoje Em Dia - Filipe Deschamps",
+        "title": "Por Que Tudo Parece Ter Menos Graça Hoje Em Dia",
         "url": "https://www.youtube.com/watch?v=_hobgOFDekg",
-        "thumb": "https://img.youtube.com/vi/_hobgOFDekg/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/_hobgOFDekg/hqdefault.jpg",
+        "owner": "Filipe Deschamps"
       },
       {
-        "title": "A história da Ana. - Filipe Deschamps",
+        "title": "A história da Ana.",
         "url": "https://www.youtube.com/watch?v=nngF9N6ePgY",
-        "thumb": "https://img.youtube.com/vi/nngF9N6ePgY/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/nngF9N6ePgY/hqdefault.jpg",
+        "owner": "Filipe Deschamps"
       },
       {
-        "title": "Rust no Linux: A linguagem que promete mudar o Kernel - Diolinux",
+        "title": "Rust no Linux: A linguagem que promete mudar o Kernel",
         "url": "https://www.youtube.com/watch?v=lkcIrgZyAOk",
-        "thumb": "https://img.youtube.com/vi/lkcIrgZyAOk/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/lkcIrgZyAOk/hqdefault.jpg",
+        "owner": "Diolinux"
       },
       {
-        "title": "Seus primeiros passos no JavaScript - Rocketseat",
+        "title": "Seus primeiros passos no JavaScript",
         "url": "https://www.youtube.com/watch?v=OHN8Ze4te70",
-        "thumb": "https://img.youtube.com/vi/OHN8Ze4te70/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/OHN8Ze4te70/hqdefault.jpg",
+        "owner": "Rocketseat"
       },
       {
-        "title": "O que é React JS? #HipstersPontoTube - Alura Cursos Online",
+        "title": "O que é React JS? #HipstersPontoTube",
         "url": "https://www.youtube.com/watch?v=6IuQUgeDPg0",
-        "thumb": "https://img.youtube.com/vi/6IuQUgeDPg0/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/6IuQUgeDPg0/hqdefault.jpg",
+        "owner": "Alura Cursos Online"
       },
       {
-        "title": "4 dicas para escrever código limpo em JavaScript - Rocketseat",
+        "title": "4 dicas para escrever código limpo em JavaScript",
         "url": "https://www.youtube.com/watch?v=HZPS_uxT6sw",
-        "thumb": "https://img.youtube.com/vi/HZPS_uxT6sw/hqdefault.jpg"
+        "thumb": "https://img.youtube.com/vi/HZPS_uxT6sw/hqdefault.jpg",
+        "owner": "Rocketseat"
       }
     ]
   },

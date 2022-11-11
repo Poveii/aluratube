@@ -30,7 +30,6 @@ const StyledFavorites = styled.div`
 `
 
 export default function Favorites(props) {
-  console.log(props.profiles)
   const aluraProfiles = props.profiles
   return (
     <StyledFavorites>
@@ -38,7 +37,6 @@ export default function Favorites(props) {
 
       <div>
         {aluraProfiles.map((aluraProfile) => {
-          console.log(aluraProfile)
           return (
             <a href={aluraProfile.link}>
               <img src={aluraProfile.image} alt="" />

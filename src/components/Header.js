@@ -4,12 +4,6 @@ import config from "../../config.json"
 const StyledHeader = styled.div`
   padding-top: 56px;
 
-  img {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-  }
-
   #profile {
     width: 80px;
     height: 80px;
@@ -25,13 +19,20 @@ const StyledHeader = styled.div`
     gap: 16px;
   }
 `
-export default function Header(props) {
+
+const StyledBanner = styled.div`
+  height: 230px;
+  background: #222222 url(${({ banner }) => banner}) no-repeat center/cover;
+`
+export default function Header() {
   return (
     <StyledHeader>
-      <img
-        src={props.banner}
-        alt="Foto de um tela com códigos de programação"
+      <StyledBanner
+        banner={config.banner}
+        role="img"
+        aria-label="Foto de um tela com códigos de programação"
       />
+
       <section className="user-info">
         <img
           src={`https://github.com/${config.github}.png`}

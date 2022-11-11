@@ -20,7 +20,7 @@ function HomePage() {
       <CSSReset />
       <div style={homePageStyles}>
         <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
-        <Header banner={config.banner} />
+        <Header />
         <Timeline filterValue={filterValue} playlists={config.playlists} />
         <Favorites profiles={config.favorites} />
       </div>

@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 
 const StyledSearch = styled.div`
@@ -34,10 +33,19 @@ const StyledSearch = styled.div`
   }
 `
 
-export default function Search() {
+export default function Search({ filterValue, setFilterValue }) {
+  const searchValue = filterValue
+  const setSearchValue = setFilterValue
+
   return (
     <StyledSearch>
-      <input type="text" />
+      <input
+        type="text"
+        onChange={(e) => {
+          setSearchValue(e.target.value)
+        }}
+        value={searchValue}
+      />
       <button>🔎</button>
     </StyledSearch>
   )

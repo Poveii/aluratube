@@ -1,3 +1,4 @@
+import React from "react"
 import config from "../config.json"
 import { CSSReset } from "../src/components/CSSReset"
 import Menu from "../src/components/Menu"
@@ -12,13 +13,15 @@ function HomePage() {
     flex: 1,
   }
 
+  const [filterValue, setFilterValue] = React.useState("")
+
   return (
     <>
       <CSSReset />
       <div style={homePageStyles}>
-        <Menu />
+        <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
         <Header banner={config.banner} />
-        <Timeline playlists={config.playlists} />
+        <Timeline filterValue={filterValue} playlists={config.playlists} />
         <Favorites profiles={config.favorites} />
       </div>
     </>

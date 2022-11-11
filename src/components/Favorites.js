@@ -36,9 +36,9 @@ export default function Favorites(props) {
       <h2>AluraTubes Favoritos</h2>
 
       <div>
-        {aluraProfiles.map((aluraProfile) => {
+        {aluraProfiles.map((aluraProfile, index) => {
           return (
-            <a href={aluraProfile.link}>
+            <a key={index} href={aluraProfile.link}>
               <img src={aluraProfile.image} alt="" />
               <span>@{aluraProfile.name}</span>
             </a>

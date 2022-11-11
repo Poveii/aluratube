@@ -55,7 +55,7 @@ export default function Timeline({ filterValue, ...props }) {
       {playlistNames.map((playlistName) => {
         const videos = props.playlists[playlistName]
         return (
-          <section>
+          <section key={playlistName}>
             <h2>{playlistName}</h2>
             <div>
               {videos
@@ -66,7 +66,7 @@ export default function Timeline({ filterValue, ...props }) {
                 })
                 .map((video) => {
                   return (
-                    <a href={video.url}>
+                    <a key={video.url} href={video.url}>
                       <img src={video.thumb} alt="" />
                       <span>{video.title}</span>
                       <strong>{video.owner}</strong>

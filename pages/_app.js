@@ -5,7 +5,15 @@ import ColorModeProvider, {
   ColorModeContext,
 } from "../src/components/Menu/components/ColorMode"
 
-export default function MyApp({ Component, pageProps }) {
+function ProviderWrapper(props) {
+  return (
+    <ColorModeProvider initialMode={"light"}>
+      {props.children}
+    </ColorModeProvider>
+  )
+}
+
+function MyApp({ Component, pageProps }) {
   const theme = {
     light: {
       backgroundBase: "#f9f9f9",
@@ -26,11 +34,17 @@ export default function MyApp({ Component, pageProps }) {
   const context = React.useContext(ColorModeContext)
 
   return (
-    <ColorModeProvider>
-      <ThemeProvider theme={theme[context.mode]}>
-        <CSSReset />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </ColorModeProvider>
+    <ThemeProvider theme={theme[context.mode]}>
+      <CSSReset />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
+}
+
+export default function _App(props) {
+  return (
+    <ProviderWrapper>
+      <MyApp {...props} />
+    </ProviderWrapper>
   )
 }

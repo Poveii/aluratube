@@ -1,5 +1,9 @@
+import React from "react"
 import { ThemeProvider } from "styled-components"
 import { CSSReset } from "../src/components/CSSReset"
+import ColorModeProvider, {
+  ColorModeContext,
+} from "../src/components/Menu/components/ColorMode"
 
 export default function MyApp({ Component, pageProps }) {
   const theme = {
@@ -19,10 +23,14 @@ export default function MyApp({ Component, pageProps }) {
     },
   }
 
+  const context = React.useContext(ColorModeContext)
+
   return (
-    <ThemeProvider theme={theme.light}>
-      <CSSReset />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <ColorModeProvider>
+      <ThemeProvider theme={theme[context.mode]}>
+        <CSSReset />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ColorModeProvider>
   )
 }

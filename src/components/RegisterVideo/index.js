@@ -9,9 +9,18 @@ function useForm(formProps) {
     handleChange: (event) => {
       const value = event.target.value
       const name = event.target.name
+
+      const videoThumb =
+        name === "url"
+          ? `https://img.youtube.com/vi/${
+              value.split("v=", 11)[1]
+            }/hqdefault.jpg`
+          : "https://img.youtube.com/vi//hqdefault.jpg"
+
       setValues({
         ...values,
         [name]: value,
+        thumb: videoThumb,
       })
     },
     clearForm() {
@@ -22,9 +31,13 @@ function useForm(formProps) {
 
 export default function RegisterVideo() {
   const formRegister = useForm({
-    initialValues: { title: "", url: "" },
+    initialValues: {
+      title: "",
+      url: "",
+      thumb: "",
+    },
   })
-  const [visibilityForm, setVisibilityForm] = React.useState(false)
+  const [visibilityForm, setVisibilityForm] = React.useState(true)
 
   return (
     <StyledRegisterVideo>
@@ -62,6 +75,9 @@ export default function RegisterVideo() {
               onChange={formRegister.handleChange}
             />
             <button type="submit">Cadastrar</button>
+
+            <img src={formRegister.values.thumb} alt="" />
+            <p>{formRegister.values.title}</p>
           </div>
         </form>
       )}

@@ -22,8 +22,8 @@ const StyledSwitch = styled.div`
     height: 20px;
     align-items: center;
     justify-content: center;
+    user-select: none;
   }
-
   label:before {
     content: "";
     background-color: #fafafa;

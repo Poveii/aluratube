@@ -10,6 +10,23 @@ export const CSSReset = createGlobalStyle`
   body {
     font-family: sans-serif;
   }
+  /* Scroll */
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    height: 48px;
+    border-radius: 8px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: #777777;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #616161;
+  }
   /* NextJS */
   html {
     display: flex;

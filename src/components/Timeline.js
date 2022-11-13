@@ -3,7 +3,7 @@ import styled from "styled-components"
 const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
-  padding: 16px;
+  margin-top: 16px;
   overflow: hidden;
   h2 {
     font-size: 16px;
@@ -22,9 +22,10 @@ const StyledTimeline = styled.div`
     width: 100%;
     padding: 0;
     overflow: hidden;
-    padding: 16px;
+    padding: 12px 16px;
     div {
-      width: calc(100vw - 16px * 4);
+      width: calc(100vw - 12px * 4);
+      padding-bottom: 16px;
       display: grid;
       grid-gap: 16px;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -35,12 +36,12 @@ const StyledTimeline = styled.div`
       a {
         scroll-snap-align: start;
         span {
-          padding-top: 8px;
           display: block;
-          padding-right: 24px;
+          font-weight: bold;
+          padding: 8px 24px 2px 0px;
         }
         span,
-        strong {
+        p {
           color: ${({ theme }) => theme.textColorBase || "#222222"};
         }
       }
@@ -69,7 +70,7 @@ export default function Timeline({ filterValue, ...props }) {
                     <a key={video.url} href={video.url}>
                       <img src={video.thumb} alt="" />
                       <span>{video.title}</span>
-                      <strong>{video.owner}</strong>
+                      <p>{video.owner}</p>
                     </a>
                   )
                 })}

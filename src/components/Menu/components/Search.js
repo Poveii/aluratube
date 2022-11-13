@@ -6,12 +6,12 @@ const StyledSearch = styled.div`
   border: 1px solid ${({ theme }) => theme.borderBase};
   max-width: 425px;
   width: 100%;
-  border-radius: 2px;
+  border-radius: 100px;
   overflow: hidden;
 
   input {
     width: 80%;
-    padding: 4px 6px;
+    padding: 4px 12px;
     border: none;
     outline: none;
     color: ${({ theme }) => theme.textColorBase};
@@ -20,6 +20,7 @@ const StyledSearch = styled.div`
   button {
     flex: 1;
     cursor: pointer;
+    user-select: none;
     border: none;
     background-color: ${({ theme }) => theme.backgroundLevel2};
     box-shadow: 0 1px 0 rgb(0 0 0 / 10%);

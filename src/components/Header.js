@@ -13,7 +13,7 @@ const StyledHeader = styled.div`
 
   .user-info {
     width: 100%;
-    padding: 16px 32px;
+    padding: 16px;
 
     display: flex;
     align-items: center;

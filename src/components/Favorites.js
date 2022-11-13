@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 const StyledFavorites = styled.div`
   width: 100%;
-  padding: 12px 32px;
+  padding: 16px;
+  padding-bottom: 32px;
   overflow: hidden;
   h2 {
     font-size: 16px;

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import config from "../../config.json"
 
 const StyledHeader = styled.div`
+  background-color: ${({ theme }) => theme.backgroundLevel1};
   padding-top: 56px;
 
   #profile {

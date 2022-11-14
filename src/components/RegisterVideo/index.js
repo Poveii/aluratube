@@ -26,17 +26,9 @@ function useForm(formProps) {
       const value = event.target.value
       const name = event.target.name
 
-      const videoThumb =
-        name === "url"
-          ? `https://img.youtube.com/vi/${
-              value.split("v=", 11)[1]
-            }/hqdefault.jpg`
-          : "https://img.youtube.com/vi//hqdefault.jpg"
-
       setValues({
         ...values,
         [name]: value,
-        thumb: videoThumb,
       })
     },
     handleSubmit(values, e) {
@@ -58,6 +50,12 @@ function useForm(formProps) {
   }
 }
 
+function getVideoThumb(url) {
+  return `https://img.youtube.com/vi/${
+    url?.split("v=", 11)[1]?.split("&")[0]
+  }/hqdefault.jpg`
+}
+
 export default function RegisterVideo() {
   const formRegister = useForm({
     initialValues: {
@@ -66,7 +64,7 @@ export default function RegisterVideo() {
       thumb: "",
     },
   })
-  const [visibilityForm, setVisibilityForm] = React.useState(true)
+  const [visibilityForm, setVisibilityForm] = React.useState(false)
 
   return (
     <StyledRegisterVideo>
@@ -111,7 +109,14 @@ export default function RegisterVideo() {
             />
             <button type="submit">Cadastrar</button>
 
-            <img src={formRegister.values.thumb} alt="" />
+            <img
+              src={
+                formRegister.values.url.length > 42
+                  ? getVideoThumb(formRegister.values.url)
+                  : ""
+              }
+              alt=""
+            />
             <p>{formRegister.values.title}</p>
           </div>
         </form>

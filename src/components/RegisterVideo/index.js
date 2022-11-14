@@ -5,13 +5,29 @@ const validate = (values) => {
   const errors = {}
   if (!values.title) {
     errors.title = "Faltou você colocar o título do vídeo!"
-  } else if (values.title.length > 25) {
-    errors.title = "O título tem que ter pelo menos 25 caracteres."
+  } else if (values.title.length > 80) {
+    errors.title = "O título tem que ter no máximo 80 caracteres."
+  }
+  if (values.owner.length > 70) {
+    errors.owner = "O nome do Youtuber tem que ter no máximo 70 caracteres."
   }
   if (!values.url) {
     errors.url = "Faltou você colocar o link do vídeo!"
   } else if (!/youtube.com/.test(values.url)) {
     errors.url = "Esse link não é do youtube.com, favor colocar um link válido."
+  } else if (!/\/watch\?v=/.test(values.url)) {
+    errors.url =
+      "Está faltando a parte 'watch?v=', tente copiar a url direto do Youtube."
+  }
+  if (!values.playlist) {
+    errors.playlist = "Faltou você colocar a playlist onde ficará o vídeo!"
+  } else if (!/[J,j]ogos|[P,p]rogramação/.test(values.playlist)) {
+    errors.playlist =
+      "Por enquanto, só existe as playlists Jogos e Programação, favor escolher uma delas."
+  }
+  if (!values.thumb) {
+    errors.thumb =
+      "Algo de errado não está certo... Veja se o link do vídeo está correto!"
   }
 
   return errors

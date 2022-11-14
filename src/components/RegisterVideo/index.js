@@ -61,7 +61,13 @@ function useForm(formProps) {
       return isFine
     },
     clearForm() {
-      setValues({})
+      setValues({
+        title: "",
+        owner: "",
+        url: "",
+        thumb: "",
+        playlist: "",
+      })
     },
   }
 }

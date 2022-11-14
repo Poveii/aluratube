@@ -78,4 +78,7 @@ export const StyledRegisterVideo = styled.div`
     word-break: break-word;
     margin-top: 12px;
   }
+  small {
+    margin-top: 4px;
+  }
 `

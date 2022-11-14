@@ -60,8 +60,10 @@ export default function RegisterVideo() {
   const formRegister = useForm({
     initialValues: {
       title: "",
+      owner: "",
       url: "",
       thumb: "",
+      playlist: "",
     },
   })
   const [visibilityForm, setVisibilityForm] = React.useState(false)
@@ -102,6 +104,18 @@ export default function RegisterVideo() {
               onChange={formRegister.handleChange}
             />
             <input
+              placeholder="Nome do Youtuber"
+              name="owner"
+              value={formRegister.values.owner}
+              onChange={formRegister.handleChange}
+            />
+            <input
+              placeholder="Nome da Playlist (Jogos ou Programação)"
+              name="playlist"
+              value={formRegister.values.playlist}
+              onChange={formRegister.handleChange}
+            />
+            <input
               placeholder="URL"
               name="url"
               value={formRegister.values.url}
@@ -118,6 +132,7 @@ export default function RegisterVideo() {
               alt=""
             />
             <p>{formRegister.values.title}</p>
+            <small>{formRegister.values.owner}</small>
           </div>
         </form>
       )}

@@ -4,16 +4,16 @@
   "github": "poveii",
   "banner": "https://images.unsplash.com/photo-1625535069654-cfeb8f829088",
   "playlists": {
-    "games": [
+    "jogos": [
       {
         "title": "The Painscreek Killings Playlist",
-        "url": "https://www.youtube.com/playlist?list=PLrVhyUnEQMV_LUtkELSCNpTxBGydmxCQy",
+        "url": "https://www.youtube.com/watch?v=rLtbD5syza0&list=PLrVhyUnEQMV_LUtkELSCNpTxBGydmxCQy&index=1",
         "thumb": "https://img.youtube.com/vi/rLtbD5syza0/hqdefault.jpg",
         "owner": "Lives do Alanzoka"
       },
       {
         "title": "Gas Station Simulator Playlist",
-        "url": "https://www.youtube.com/playlist?list=PLrVhyUnEQMV_cx5h0WlOQop9u_C9mNWSQ",
+        "url": "https://www.youtube.com/watch?v=CP8fM1otBmg&list=PLrVhyUnEQMV_cx5h0WlOQop9u_C9mNWSQ&index=1",
         "thumb": "https://img.youtube.com/vi/CP8fM1otBmg/hqdefault.jpg",
         "owner": "Lives do Alanzoka"
       },
@@ -31,7 +31,7 @@
       },
       {
         "title": "Perfect Heist 2 Playlist",
-        "url": "https://www.youtube.com/playlist?list=PLQ-UNXudbYP9UDZWU6Z0eBFH9sk0BklQr",
+        "url": "https://www.youtube.com/watch?v=6njHa_JjYHQ&list=PLQ-UNXudbYP9UDZWU6Z0eBFH9sk0BklQr&index=1",
         "thumb": "https://img.youtube.com/vi/6njHa_JjYHQ/hqdefault.jpg",
         "owner": "Hayashii Lives"
       },
@@ -83,14 +83,14 @@
   },
   "favorites": [
     {
-      "name": "Alurinho",
-      "image": "https://randomuser.me/api/portraits/men/66.jpg",
-      "link": ""
+      "name": "florencioMath",
+      "image": "https://github.com/florencioMath.png",
+      "link": "https://thealuratube.vercel.app/"
     },
     {
-      "name": "Alurinha",
-      "image": "https://randomuser.me/api/portraits/women/48.jpg",
-      "link": ""
+      "name": "sucodelarangela",
+      "image": "https://github.com/sucodelarangela.png",
+      "link": "https://aluratube-next-js.vercel.app/"
     }
   ]
 }

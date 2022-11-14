@@ -1,6 +1,22 @@
 import React from "react"
 import { StyledRegisterVideo } from "./styles"
 
+const validate = (values) => {
+  const errors = {}
+  if (!values.title) {
+    errors.title = "Faltou você colocar o título do vídeo!"
+  } else if (values.title.length > 25) {
+    errors.title = "O título tem que ter pelo menos 25 caracteres."
+  }
+  if (!values.url) {
+    errors.url = "Faltou você colocar o link do vídeo!"
+  } else if (!/youtube.com/.test(values.url)) {
+    errors.url = "Esse link não é do youtube.com, favor colocar um link válido."
+  }
+
+  return errors
+}
+
 function useForm(formProps) {
   const [values, setValues] = React.useState(formProps.initialValues)
 
@@ -22,6 +38,19 @@ function useForm(formProps) {
         [name]: value,
         thumb: videoThumb,
       })
+    },
+    handleSubmit(values, e) {
+      let isFine = false
+      const errors = validate(values)
+      const error = Object.values(errors)[0]
+      if (error !== undefined) {
+        alert(error)
+        e.preventDefault()
+        return !isFine
+      }
+
+      e.preventDefault()
+      return isFine
     },
     clearForm() {
       setValues({})
@@ -48,9 +77,15 @@ export default function RegisterVideo() {
       {visibilityForm && (
         <form
           onSubmit={(event) => {
-            event.preventDefault()
-            setVisibilityForm(false)
-            formRegister.clearForm()
+            const validation = formRegister.handleSubmit(
+              formRegister.values,
+              event
+            )
+
+            if (validation === false) {
+              setVisibilityForm(false)
+              formRegister.clearForm()
+            }
           }}
         >
           <div>
@@ -84,3 +119,9 @@ export default function RegisterVideo() {
     </StyledRegisterVideo>
   )
 }
+
+/*
+  - [x] Criar as regras dos inputs
+  - [ ] Passar as regras para o UseForm
+  - [ ] Mostrar um alerta caso tenha algum conteúdo na variável errors
+*/

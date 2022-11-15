@@ -30,6 +30,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Node e NPM](https://nodejs.org/)
 - [React](https://reactjs.org/)
 - [NextJS](https://nextjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [Supabase](https://supabase.com/)
 
 ## 💻 Projeto
 

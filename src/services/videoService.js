@@ -7,6 +7,7 @@ const supabase = createClient(PROJECT_URL, PUBLIC_KEY)
 
 export function videoService() {
   return {
+    supabase,
     getAllVideos() {
       return supabase.from("videos")
     },

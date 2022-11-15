@@ -1,4 +1,5 @@
 import React from "react"
+import Head from "next/head"
 import config from "../config.json"
 import Menu from "../src/components/Menu"
 import Header from "../src/components/Header"
@@ -48,6 +49,15 @@ function HomePage() {
   return (
     <>
       <div style={homePageStyles}>
+        <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <title>Poveii - Aluratube</title>
+        </Head>
+
         <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
         <Header />
         <Timeline filterValue={filterValue} playlists={playlists} />

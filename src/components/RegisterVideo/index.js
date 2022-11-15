@@ -1,4 +1,5 @@
 import React from "react"
+import { videoService } from "../../services/videoService"
 import { StyledRegisterVideo } from "./styles"
 
 const validate = (values) => {
@@ -25,7 +26,7 @@ const validate = (values) => {
     errors.playlist =
       "Por enquanto, só existe as playlists Jogos e Programação, favor escolher uma delas."
   }
-  if (!values.thumb) {
+  if (values.thumb.length > 51) {
     errors.thumb =
       "Algo de errado não está certo... Veja se o link do vídeo está correto!"
   }
@@ -79,6 +80,7 @@ function getVideoThumb(url) {
 }
 
 export default function RegisterVideo() {
+  const service = videoService()
   const formRegister = useForm({
     initialValues: {
       title: "",
@@ -105,6 +107,19 @@ export default function RegisterVideo() {
             )
 
             if (validation === false) {
+              service
+                .getAllVideos()
+                .insert({
+                  title: formRegister.values.title,
+                  owner: formRegister.values.owner,
+                  url: formRegister.values.url,
+                  thumb: getVideoThumb(formRegister.values.url),
+                  playlist: formRegister.values.playlist,
+                  isNew: true,
+                })
+                .then()
+                .catch((err) => console.log(err))
+
               setVisibilityForm(false)
               formRegister.clearForm()
             }

@@ -35,7 +35,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Descrição do projeto
+O Aluratube é um site baseado no [YouTube](https://www.youtube.com/), onde é possível ver meus vídeos favoritos enfileirados em playlists, outros aluratubes que gostei durante o evento e, além disso, é possível preencher um formulário para adicionar novos vídeos as playlists.
 
 ## ✈️ Deploy
 

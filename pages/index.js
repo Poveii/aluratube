@@ -1,5 +1,4 @@
 import React from "react"
-import Head from "next/head"
 import config from "../config.json"
 import Menu from "../src/components/Menu"
 import Header from "../src/components/Header"
@@ -48,10 +47,6 @@ function HomePage() {
   }
   return (
     <>
-      <Head>
-        <html lang="pt-BR" />
-        <title>Poveii - Aluratube</title>
-      </Head>
       <div style={homePageStyles}>
         <Menu filterValue={filterValue} setFilterValue={setFilterValue} />
         <Header />

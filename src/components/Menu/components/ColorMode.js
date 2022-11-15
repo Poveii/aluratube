@@ -2,11 +2,8 @@ import React from "react"
 
 export const ColorModeContext = React.createContext({
   mode: "",
-  setMode: () => {
-    alert("You need to configure me first!")
-  },
   toggleMode: () => {
-    alert("You need to configure me first!")
+    alert("Você precisa me configurar primeiro!")
   },
 })
 
@@ -18,9 +15,7 @@ export default function ColorModeProvider(props) {
   }
 
   return (
-    <ColorModeContext.Provider
-      value={{ mode: mode, setMode: setMode, toggleMode: toggleMode }}
-    >
+    <ColorModeContext.Provider value={{ mode: mode, toggleMode: toggleMode }}>
       {props.children}
     </ColorModeContext.Provider>
   )

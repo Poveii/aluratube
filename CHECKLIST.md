@@ -8,7 +8,7 @@
 
 ## Listas de estilizações para aplicação:
 
-- [ ] Um placeholder dizendo "Pesquisar" no componente da barra de pesquisa.
+- [x] Um placeholder dizendo "Pesquisar" no componente da barra de pesquisa.
 - [ ] Formulário mais intuitivo e bonito.
 - [ ] Adequar a identidade visual para algo mais parecido comigo (Poveiitube ???).
 - [ ] Adicionar um favicon da aplicação.

@@ -19,14 +19,27 @@ function HomePage() {
       .select("*")
       .then((response) => {
         const newPlaylists = { ...playlists }
-        response.data.forEach((video) => {
-          if (video.isNew === true) return
-          if (!newPlaylists[video.playlist]) newPlaylists[video.playlist] = []
-          newPlaylists[video.playlist].push(video)
-        })
+        try {
+          response.data.forEach((video) => {
+            if (video.isNew === true) return
+            if (!newPlaylists[video.playlist]) newPlaylists[video.playlist] = []
+            newPlaylists[video.playlist].push(video)
+          })
+        } catch (err) {
+          Object.keys(config.playlists).forEach((playlistName) => {
+            Object.values(config.playlists[playlistName]).forEach((video) => {
+              if (!newPlaylists[playlistName]) newPlaylists[playlistName] = []
+              newPlaylists[playlistName].push(video)
+            })
+          })
+        }
         setPlaylists(newPlaylists)
       })
   }, [isChanged])
+
+  const stopSupabaseServer = () => {
+    videoService().supabase.removeAllChannels()
+  }
 
   videoService()
     .supabase.channel("public:videos")
@@ -39,7 +52,11 @@ function HomePage() {
         isChanged = !isChanged
       }
     )
-    .subscribe()
+    .subscribe((status) => {
+      if (status === "CHANNEL_ERROR") {
+        stopSupabaseServer()
+      }
+    })
 
   const homePageStyles = {
     display: "flex",

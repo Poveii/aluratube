@@ -66,8 +66,11 @@ export default function Timeline({ filterValue, ...props }) {
                   return titleNormalized.includes(filterValueNormalized)
                 })
                 .map((video) => {
+                  const regex = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/
+                  const matches = video.url.match(regex)
+                  const urlFormatted = matches[7]
                   return (
-                    <a key={video.url} href={video.url}>
+                    <a key={video.url} href={`/video?id=${urlFormatted}`}>
                       <img src={video.thumb} alt="" />
                       <span>{video.title}</span>
                       <p>{video.owner}</p>

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import DarkModeSwitch from "../src/components/Menu/components/DarkModeSwitch"
+import { useRouter } from "next/router"
 
 const StyledVideoWrapper = styled.div`
   display: flex;
@@ -11,13 +12,16 @@ const StyledVideoWrapper = styled.div`
 `
 
 export default function Video() {
+  const router = useRouter()
+  const { id } = router.query
+
   return (
     <StyledVideoWrapper>
       <a href="/">← Voltar</a>
       <iframe
         width="560"
         height="315"
-        src={`https://www.youtube.com/embed/`}
+        src={`https://www.youtube.com/embed/${id}`}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
